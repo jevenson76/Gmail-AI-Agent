@@ -1,0 +1,40 @@
+{
+  "appId": "com.gmailaiagent.app",
+  "productName": "Gmail AI Agent",
+  "copyright": "Copyright © 2023",
+  "files": [
+    "dist/**/*",
+    "dist-electron/**/*"
+  ],
+  "directories": {
+    "buildResources": "resources",
+    "output": "release"
+  },
+  "win": {
+    "target": [
+      {
+        "target": "nsis",
+        "arch": ["x64"]
+      },
+      {
+        "target": "portable",
+        "arch": ["x64"]
+      }
+    ],
+    "icon": "public/favicon.ico"
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
+    "shortcutName": "Gmail AI Agent"
+  },
+  "portable": {
+    "artifactName": "GmailAIAgent-Portable-${version}.exe"
+  },
+  "publish": {
+    "provider": "github",
+    "releaseType": "release"
+  }
+} 
